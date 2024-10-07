@@ -1,0 +1,56 @@
+{
+  "ingredients": {
+    "1": { "nom": "Rhum", "type": "hard" },
+    "2": { "nom": "Menthe", "type": "other" },
+    "3": { "nom": "Citron vert", "type": "other" },
+    "4": { "nom": "Sucre", "type": "other" },
+    "5": { "nom": "Eau gazeuse", "type": "soft" },
+    "6": { "nom": "Crème de coco", "type": "other" },
+    "7": { "nom": "Jus d'ananas", "type": "soft" }
+  },
+  "verres": {
+    "1": { "nom": "Verre à cocktail" },
+    "2": { "nom": "Verre à long drink" }
+  },
+  "cocktails": {
+    "1": {
+      "nom": "Mojito",
+      "description": "Un cocktail rafraîchissant à la menthe.",
+      "verreId": "1",
+      "recette": [
+        { "ingredientId": "1", "qtt": 5, "unite": "cl" },
+        { "ingredientId": "2", "qtt": 10, "unite": "feuilles" },
+        { "ingredientId": "3", "qtt": 1, "unite": "unité" },
+        { "ingredientId": "4", "qtt": 2, "unite": "cuillères" },
+        { "ingredientId": "5", "qtt": 10, "unite": "cl" }
+      ],
+      "image": "https://example.com/mojito.jpg",
+      "visible": true
+    },
+    "2": {
+      "nom": "Piña Colada",
+      "description": "Un cocktail crémeux à base d'ananas.",
+      "verreId": "1",
+      "recette": [
+        { "ingredientId": "1", "qtt": 5, "unite": "cl" },
+        { "ingredientId": "6", "qtt": 5, "unite": "cl" },
+        { "ingredientId": "7", "qtt": 10, "unite": "cl" }
+      ],
+      "image": "https://example.com/pina_colada.jpg",
+      "visible": true
+    },
+    "3": {
+      "nom": "Virgin Mojito",
+      "description": "Une version sans alcool du Mojito.",
+      "verreId": "1",
+      "recette": [
+        { "ingredientId": "2", "qtt": 10, "unite": "feuilles" },
+        { "ingredientId": "3", "qtt": 1, "unite": "unité" },
+        { "ingredientId": "4", "qtt": 2, "unite": "cuillères" },
+        { "ingredientId": "5", "qtt": 10, "unite": "cl" }
+      ],
+      "image": "https://example.com/virgin_mojito.jpg",
+      "visible": true
+    }
+  }
+}

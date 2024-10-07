@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liste de Cocktails</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Bienvenue à la soirée cocktails !</h1>
+        <input type="text" id="search" placeholder="Rechercher un cocktail...">
+        <select id="filter">
+            <option value="">Tous</option>
+            <option value="hard">Alcool</option>
+            <option value="soft">Sans alcool</option>
+            <option value="other">Autre</option>
+        </select>
+    </header>
+    <main id="cocktail-list" class="grid"></main>
+
+    <!-- Modal pour afficher les détails du cocktail -->
+    <div id="cocktail-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <img id="cocktail-image" src="" alt="Cocktail Image" />
+            <h2 id="modal-title"></h2>
+            <p id="modal-description"></p>
+            <h3>Recette :</h3>
+            <ul id="modal-recipe"></ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Votre Nom</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
