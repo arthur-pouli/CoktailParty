@@ -22,14 +22,19 @@ class Cocktail {
     }
 }
 
+let allIngredients = []; // Déclaration pour stocker tous les ingrédients
+let cocktails = []; // Déclaration pour stocker tous les cocktails
+
 // Fonction pour charger les données depuis le fichier JSON
 async function chargerCocktails() {
     try {
         const response = await fetch('cocktails.json');
-        if (!response.ok) {
-            throw new Error('Erreur réseau : ' + response.status);
-        }
+        if (!response.ok) throw new Error('Erreur réseau : ' + response.status);
+        
         const data = await response.json();
+        allIngredients = [...new Set(
+            Object.values(data.ingredients).map(ingredient => ingredient.nom) // Récupération des noms d'ingrédients
+        )]; // Utilisation d'un Set pour ne garder que les noms uniques
 
         return Object.values(data.cocktails).map(cocktail => new Cocktail(
             cocktail.nom,
@@ -47,7 +52,7 @@ async function chargerCocktails() {
     }
 }
 
-// Fonction pour afficher les cocktails
+// Fonction d'affichage des cocktails
 function afficherCocktails(cocktails) {
     const cocktailList = document.getElementById('cocktail-list');
     cocktailList.innerHTML = ''; // Réinitialise la liste
@@ -85,16 +90,61 @@ document.querySelector('.close-button').onclick = () => {
     document.getElementById('cocktail-modal').style.display = 'none';
 };
 
+// Fonction d'autocomplétion pour les ingrédients
+function autocomplete(input, ingredients, autocompleteListId) {
+    let currentFocus;
+
+    input.addEventListener("input", function () {
+        const value = this.value;
+        closeAllLists();
+        if (!value) return false;
+
+        currentFocus = -1;
+        const listDiv = document.getElementById(autocompleteListId);
+        listDiv.innerHTML = ''; // Réinitialise la liste
+
+        ingredients.forEach(ingredient => {
+            if (ingredient.toLowerCase().startsWith(value.toLowerCase())) {
+                const itemDiv = document.createElement("div");
+                itemDiv.innerHTML = `<strong>${ingredient.substr(0, value.length)}</strong>${ingredient.substr(value.length)}<input type='hidden' value='${ingredient}'>`;
+                itemDiv.addEventListener("click", function () {
+                    input.value = this.getElementsByTagName("input")[0].value;
+                    closeAllLists();
+                    filterCocktails(cocktails); // Met à jour les cocktails après sélection
+                });
+                listDiv.appendChild(itemDiv);
+            }
+        });
+    });
+
+    function closeAllLists(element) {
+        const items = document.getElementsByClassName("autocomplete-items");
+        for (let i = 0; i < items.length; i++) {
+            if (element !== items[i] && element !== input) {
+                items[i].innerHTML = ''; // Vide la liste
+            }
+        }
+    }
+
+    document.addEventListener("click", function (e) {
+        closeAllLists(e.target);
+    });
+}
+
 // Fonction de recherche et de filtre
 function filterCocktails(cocktails) {
     const searchQuery = document.getElementById('search').value.toLowerCase();
     const filterValue = document.getElementById('filter').value;
+    const desiredIngredient = document.getElementById('desired-ingredient').value.toLowerCase();
+    const excludedIngredient = document.getElementById('excluded-ingredient').value.toLowerCase();
 
     const filteredCocktails = cocktails.filter(cocktail => {
         const matchesSearch = cocktail.nom.toLowerCase().includes(searchQuery);
-        const matchesFilter = filterValue === "" || cocktail.getAlcoholType() === filterValue;
+        const matchesFilter = !filterValue || cocktail.getAlcoholType() === filterValue;
+        const containsDesired = !desiredIngredient || cocktail.recette.some(ing => ing.produit.toLowerCase().includes(desiredIngredient));
+        const containsExcluded = excludedIngredient.length < 2 || !cocktail.recette.some(ing => ing.produit.toLowerCase().includes(excludedIngredient));
 
-        return matchesSearch && matchesFilter;
+        return matchesSearch && matchesFilter && containsDesired && containsExcluded;
     });
 
     afficherCocktails(filteredCocktails);
@@ -103,10 +153,41 @@ function filterCocktails(cocktails) {
 // Écouteurs d'événements
 document.getElementById('search').addEventListener('input', () => filterCocktails(cocktails));
 document.getElementById('filter').addEventListener('change', () => filterCocktails(cocktails));
+document.getElementById('desired-ingredient').addEventListener('input', () => filterCocktails(cocktails));
+document.getElementById('excluded-ingredient').addEventListener('input', () => filterCocktails(cocktails));
+
+// Ajout des écouteurs d'événements pour les boutons de suppression
+document.getElementById('clear-desired').addEventListener('click', () => {
+    document.getElementById('desired-ingredient').value = ''; // Réinitialise le champ
+    filterCocktails(cocktails); // Met à jour les cocktails après suppression
+});
+
+document.getElementById('clear-excluded').addEventListener('click', () => {
+    document.getElementById('excluded-ingredient').value = ''; // Réinitialise le champ
+    filterCocktails(cocktails); // Met à jour les cocktails après suppression
+});
+
+// Gestion de l'affichage des filtres
+document.addEventListener('DOMContentLoaded', () => {
+    const toggleIcon = document.getElementById('toggle-filters');
+    const filtersDiv = document.getElementById('filters');
+    filtersDiv.style.display = 'none'; // Cacher les filtres par défaut
+
+    toggleIcon.addEventListener('click', () => {
+        if (filtersDiv.style.display === 'none' || filtersDiv.style.display === '') {
+            filtersDiv.style.display = 'flex'; // Afficher les filtres
+            toggleIcon.classList.replace('fa-eye', 'fa-eye-slash'); // Changer l'icône
+        } else {
+            filtersDiv.style.display = 'none'; // Cacher les filtres
+            toggleIcon.classList.replace('fa-eye-slash', 'fa-eye'); // Changer l'icône
+        }
+    });
+});
 
 // Chargement des cocktails et affichage initial
-let cocktails = [];
 chargerCocktails().then(loadedCocktails => {
     cocktails = loadedCocktails;
     afficherCocktails(cocktails);
+    autocomplete(document.getElementById("desired-ingredient"), allIngredients, "desired-autocomplete-list");
+    autocomplete(document.getElementById("excluded-ingredient"), allIngredients, "excluded-autocomplete-list");
 });

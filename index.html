@@ -1,29 +1,50 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liste de Cocktails</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
     <header>
         <h1>Bienvenue à la soirée cocktails !</h1>
-        <input type="text" id="search" placeholder="Rechercher un cocktail...">
-        <select id="filter">
-            <option value="">Tous</option>
-            <option value="hard">Alcool</option>
-            <option value="soft">Sans alcool</option>
-            <option value="other">Autre</option>
-        </select>
+        <div class="header-inputs">
+            <input type="text" id="search" placeholder="Rechercher un cocktail...">
+            <i id="toggle-filters" class="fas fa-eye toggle-filters-icon"></i>
+        </div>
+
+        <div id="filters" class="autocomplete-filters" style="display: none;">
+            <select id="filter">
+                <option value="">Tous</option>
+                <option value="hard">Alcool</option>
+                <option value="soft">Sans alcool</option>
+            </select>
+
+            <div class="autocomplete-container">
+                <input type="text" id="desired-ingredient" placeholder="Ingrédient désiré...">
+                <button class="clear-button" id="clear-desired">&times;</button>
+                <div id="desired-autocomplete-list" class="autocomplete-items"></div>
+            </div>
+
+            <div class="autocomplete-container">
+                <input type="text" id="excluded-ingredient" placeholder="Ingrédient exclu...">
+                <button class="clear-button" id="clear-excluded">&times;</button>
+                <div id="excluded-autocomplete-list" class="autocomplete-items"></div>
+            </div>
+        </div>
     </header>
+
     <main id="cocktail-list" class="grid"></main>
 
     <!-- Modal pour afficher les détails du cocktail -->
     <div id="cocktail-modal" class="modal">
         <div class="modal-content">
             <span class="close-button">&times;</span>
-            <img id="cocktail-image" src="" alt="Cocktail Image" />
+            <img id="cocktail-image" src="" alt="Image du cocktail" />
             <h2 id="modal-title"></h2>
             <p id="modal-description"></p>
             <h3>Recette :</h3>
@@ -32,8 +53,10 @@
     </div>
 
     <footer>
-        <p>&copy; 2024 Votre Nom</p>
+        <p>&copy; 2024</p>
     </footer>
+
     <script src="script.js"></script>
 </body>
+
 </html>
