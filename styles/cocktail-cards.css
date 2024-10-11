@@ -1,0 +1,52 @@
+/* cocktail-cards.css */
+
+.grid {
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    gap: 20px; 
+    padding: 20px; 
+}
+
+.cocktail-card {
+    background: #ffffff; 
+    border-radius: 16px; 
+    padding: 15px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-left: 4px solid #3498db; 
+    max-width: 100%; 
+    margin-bottom: 10px; 
+}
+
+.cocktail-card:hover {
+    transform: translateY(-8px); 
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); 
+}
+
+/* Styles pour la vue liste */
+.list {
+    display: flex;
+    flex-direction: column;
+}
+
+.list .cocktail-card {
+    display: flex; 
+    align-items: center; 
+}
+
+.list .cocktail-card img {
+    width: 50px; /* Ajustez la taille de l'image pour la vue liste */
+    height: auto; 
+    margin-right: 10px; /* Espacement entre l'image et le texte */
+}
+
+
+@media (max-width: 768px) {
+    .grid {
+        padding: 10px; 
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+    }
+
+    .cocktail-card {
+        padding: 10px; 
+    }
+}
