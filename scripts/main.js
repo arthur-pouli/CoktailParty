@@ -12,8 +12,11 @@ class Cocktail {
 
     // Méthode pour obtenir le type d'alcool
     getAlcoholType() {
-        return this.recette.some(ingredient => ingredient.type === 'hard') ? 'hard' : 'soft';
+        const hasHardAlcohol = this.recette.some(ingredient => ingredient.type === 'hard');
+        console.log(`Cocktail: ${this.nom}, Type alcool détecté: ${hasHardAlcohol ? 'hard' : 'soft'}`);
+        return hasHardAlcohol ? 'hard' : 'soft';
     }
+
 }
 
 // Classe pour représenter un ingrédient
@@ -39,7 +42,6 @@ async function chargerCocktails(fichier) {
         if (!response.ok) throw new Error('Erreur réseau : ' + response.status);
 
         const textData = await response.text();
-        console.log(textData); // Log pour vérifier le contenu avant le parsing
 
         let data;
         try {

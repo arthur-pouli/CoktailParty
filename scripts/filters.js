@@ -5,6 +5,11 @@ function filterCocktails(cocktails) {
     const desiredIngredient = document.getElementById('desired-ingredient').value.toLowerCase();
     const excludedIngredient = document.getElementById('excluded-ingredient').value.toLowerCase();
 
+    console.log('Recherche:', searchQuery);
+    console.log('Filtre alcool/sans alcool:', filterValue);
+    console.log('Ingrédient désiré:', desiredIngredient);
+    console.log('Ingrédient exclu:', excludedIngredient);
+
     const filteredCocktails = cocktails.filter(cocktail => {
         const matchesSearch = cocktail.nom.toLowerCase().includes(searchQuery) || cocktail.description.toLowerCase().includes(searchQuery);
         const matchesFilter = filterValue ? cocktail.getAlcoholType() === filterValue : true;
@@ -14,6 +19,7 @@ function filterCocktails(cocktails) {
         return matchesSearch && matchesFilter && matchesDesiredIngredient && matchesExcludedIngredient;
     });
 
+    console.log('Cocktails filtrés:', filteredCocktails);
     afficherCocktails(filteredCocktails);
 }
 
@@ -58,24 +64,39 @@ function autocomplete(input, ingredients, autocompleteListId) {
     });
 }
 
-// Initialisation des événements pour les filtres
+// Initialisation des événements et chargement initial
 document.addEventListener('DOMContentLoaded', () => {
-    const toggleIcon = document.getElementById('toggle-filters');
-    const filtersDiv = document.getElementById('filters');
-    filtersDiv.style.display = 'none'; // Cacher les filtres par défaut
+    // Récupérer le fichier spécifié dans l'URL
+    const fileParam = "Resource/" + getFileParameter() + ".json";
+    console.log(fileParam);
+    // Vérifier si le fichier spécifié est dans la liste des fichiers disponibles
+    if (availableFiles.includes(fileParam)) {
+        chargerCocktails(fileParam).then(cocktailsList => {
+            cocktails = cocktailsList; // Stocker les cocktails chargés
+            afficherCocktails(cocktails); // Afficher les cocktails dans la liste
+            currentFileLoaded = fileParam; // Mettez à jour le fichier actuellement chargé
 
-    // Écouter le clic sur l'icône pour afficher/masquer les filtres
-    toggleIcon.addEventListener('click', () => {
-        if (filtersDiv.style.display === 'none' || filtersDiv.style.display === '') {
-            filtersDiv.style.display = 'flex'; // Afficher les filtres
-            toggleIcon.classList.replace('fa-eye', 'fa-eye-slash'); // Changer l'icône
-        } else {
-            filtersDiv.style.display = 'none'; // Cacher les filtres
-            toggleIcon.classList.replace('fa-eye-slash', 'fa-eye'); // Changer l'icône
-        }
+            // Autocomplétion pour les ingrédients après chargement des cocktails
+            autocomplete(document.getElementById('desired-ingredient'), allIngredients, 'desired-autocomplete-list');
+            autocomplete(document.getElementById('excluded-ingredient'), allIngredients, 'excluded-autocomplete-list');
+        });
+    } else {
+        console.error('Fichier non valide ou non spécifié dans l\'URL.');
+    }
+
+    // Écouteur pour le filtre alcool/sans alcool
+    document.getElementById('filter').addEventListener('change', () => {
+        const filterValue = document.getElementById('filter').value;
+        console.log('Filtre alcool/sans alcool changé:', filterValue);  // Log pour vérifier la valeur
+        filterCocktails(cocktails);  // Appliquer le filtrage après sélection du filtre
     });
 
-    // Événements pour les croix de réinitialisation des filtres
+    // Écouter les événements d'entrée pour la recherche en temps réel
+    document.getElementById('search').addEventListener('input', () => {
+        filterCocktails(cocktails); // Recherche instantanée
+    });
+
+    // Événements pour les filtres d'ingrédients
     document.getElementById('clear-desired').addEventListener('click', () => {
         document.getElementById('desired-ingredient').value = ''; // Réinitialise le champ
         filterCocktails(cocktails); // Met à jour les cocktails après réinitialisation
@@ -86,7 +107,18 @@ document.addEventListener('DOMContentLoaded', () => {
         filterCocktails(cocktails); // Met à jour les cocktails après réinitialisation
     });
 
-    // Autocomplétion pour les ingrédients
-    autocomplete(document.getElementById('desired-ingredient'), allIngredients, 'desired-autocomplete-list'); // Autocomplétion pour les ingrédients souhaités
-    autocomplete(document.getElementById('excluded-ingredient'), allIngredients, 'excluded-autocomplete-list'); // Autocomplétion pour les ingrédients exclus
+    // Affichage/masquage des filtres
+    const toggleIcon = document.getElementById('toggle-filters');
+    const filtersDiv = document.getElementById('filters');
+    filtersDiv.style.display = 'none'; // Cacher les filtres par défaut
+
+    toggleIcon.addEventListener('click', () => {
+        if (filtersDiv.style.display === 'none' || filtersDiv.style.display === '') {
+            filtersDiv.style.display = 'flex'; // Afficher les filtres
+            toggleIcon.classList.replace('fa-eye', 'fa-eye-slash'); // Changer l'icône
+        } else {
+            filtersDiv.style.display = 'none'; // Cacher les filtres
+            toggleIcon.classList.replace('fa-eye-slash', 'fa-eye'); // Changer l'icône
+        }
+    });
 });
