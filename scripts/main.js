@@ -1,13 +1,10 @@
 // Classe pour représenter un cocktail
 class Cocktail {
-    constructor(nom, description, verreId, recette, image, visible, commentaire) {
+    constructor(nom, description, recette, image) {
         this.nom = nom;
         this.description = description;
-        this.verreId = verreId;
         this.recette = recette; // Ceci doit être un tableau d'objets Ingredient
         this.image = image;
-        this.visible = visible; // Si cette propriété est nécessaire, sinon vous pouvez la retirer
-        this.commentaire = commentaire; // Ajout du commentaire
     }
 
     // Méthode pour obtenir le type d'alcool
@@ -16,7 +13,6 @@ class Cocktail {
         console.log(`Cocktail: ${this.nom}, Type alcool détecté: ${hasHardAlcohol ? 'hard' : 'soft'}`);
         return hasHardAlcohol ? 'hard' : 'soft';
     }
-
 }
 
 // Classe pour représenter un ingrédient
@@ -29,10 +25,9 @@ class Ingredient {
     }
 }
 
-// Variables globales pour stocker les cocktails et les ingrédients
+// Variables globales pour stocker les cocktails
 let cocktails = [];
-let allIngredients = [];
-let availableFiles = ["Resource/Juju.json", "Resource/Alex.json"]; // Fichiers JSON disponibles
+let availableFiles = ["Resource/juju.json"]; // Fichiers JSON disponibles
 let currentFileLoaded = null; // Variable pour suivre le fichier actuellement chargé
 
 // Fonction pour charger dynamiquement les cocktails à partir du fichier sélectionné
@@ -52,23 +47,12 @@ async function chargerCocktails(fichier) {
             return []; // Retourne un tableau vide en cas d'erreur de parsing
         }
 
-        // Extraction des ingrédients uniques
-        allIngredients = [...new Set(
-            Object.values(data.ingredients).map(ingredient => ingredient.nom)
-        )];
-
         // Création des objets cocktails à partir des données chargées
         return Object.values(data.cocktails).map(cocktail => new Cocktail(
             cocktail.nom,
             cocktail.description,
-            cocktail.verreId,
-            cocktail.recette.map(item => {
-                const ingredientData = data.ingredients[item.ingredientId];
-                return new Ingredient(ingredientData.nom, item.qtt, item.unite, ingredientData.type);
-            }),
+            cocktail.recette.map(item => new Ingredient(item.ingredient, item.qtt, item.unite, item.type)),
             cocktail.image,
-            cocktail.visible,
-            cocktail.commentaire // Inclure le commentaire
         ));
     } catch (error) {
         console.error('Erreur lors du chargement des cocktails :', error);
@@ -91,13 +75,30 @@ function afficherCocktails(cocktails) {
 
     cocktails.forEach(cocktail => {
         const card = document.createElement('div');
-        card.className = 'cocktail-card';
-        card.innerHTML = `<h3>${cocktail.nom}</h3><p>${cocktail.description}</p>`;
-        card.onclick = () => afficherDetails(cocktail); // Affiche les détails lors du clic
-        
-        // Ajoute le cocktail à la liste ou aux cartes selon le mode de vue
+    
+        // Vérifier si le cocktail a une image et ajuster la classe en conséquence
+        if (cocktail.image) {
+            card.className = 'cocktail-card has-image'; // Ajout de la classe has-image si une image est présente
+            card.style.backgroundImage = `url(${cocktail.image})`; // Définir l'image de fond avec l'URL de l'image
+        } else {
+            card.className = 'cocktail-card'; // Sinon, juste la classe cocktail-card
+        }
+    
+        // Ajouter le texte à l'intérieur de la carte
+        card.innerHTML = `
+            <h3>${cocktail.nom}</h3>
+            <p>${cocktail.description}</p>
+        `;
+    
+        // Ajouter l'événement de clic pour afficher les détails
+        card.onclick = () => afficherDetails(cocktail);
+    
+        // Ajouter la carte du cocktail dans la section correspondante
         cocktailCards.appendChild(card);
     });
+    
+    
+    
 }
 
 // Fonction pour afficher les détails du cocktail dans la modal

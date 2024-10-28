@@ -15,7 +15,7 @@ function filterCocktails(cocktails) {
         const matchesFilter = filterValue ? cocktail.getAlcoholType() === filterValue : true;
         const matchesDesiredIngredient = desiredIngredient ? cocktail.recette.some(ing => ing.produit.toLowerCase().includes(desiredIngredient)) : true;
         const matchesExcludedIngredient = excludedIngredient ? !cocktail.recette.some(ing => ing.produit.toLowerCase().includes(excludedIngredient)) : true;
-
+    
         return matchesSearch && matchesFilter && matchesDesiredIngredient && matchesExcludedIngredient;
     });
 
@@ -35,11 +35,10 @@ function autocomplete(input, ingredients, autocompleteListId) {
         currentFocus = -1;
         const listDiv = document.getElementById(autocompleteListId);
         listDiv.innerHTML = ''; // Réinitialise la liste
-
         ingredients.forEach(ingredient => {
             if (ingredient.toLowerCase().startsWith(value.toLowerCase())) {
                 const itemDiv = document.createElement("div");
-                itemDiv.innerHTML = `<strong>${ingredient.substr(0, value.length)}</strong>${ingredient.substr(value.length)}<input type='hidden' value='${ingredient}'>`;
+                itemDiv.innerHTML = `<strong>${ingredient.substr(0, value.length)}</strong>${ingredient.substr(value.length)}<input type="hidden" value="${ingredient}">`;
                 itemDiv.addEventListener("click", function () {
                     input.value = this.getElementsByTagName("input")[0].value;
                     closeAllLists();
@@ -64,6 +63,7 @@ function autocomplete(input, ingredients, autocompleteListId) {
     });
 }
 
+
 // Initialisation des événements et chargement initial
 document.addEventListener('DOMContentLoaded', () => {
     // Récupérer le fichier spécifié dans l'URL
@@ -73,9 +73,15 @@ document.addEventListener('DOMContentLoaded', () => {
     if (availableFiles.includes(fileParam)) {
         chargerCocktails(fileParam).then(cocktailsList => {
             cocktails = cocktailsList; // Stocker les cocktails chargés
+        
+            // Extraire les ingrédients uniques à partir des recettes des cocktails
+            allIngredients = [...new Set(
+                cocktails.flatMap(cocktail => cocktail.recette.map(ing => ing.produit))
+            )];
+        
             afficherCocktails(cocktails); // Afficher les cocktails dans la liste
-            currentFileLoaded = fileParam; // Mettez à jour le fichier actuellement chargé
-
+            currentFileLoaded = fileParam; // Met à jour le fichier actuellement chargé
+        
             // Autocomplétion pour les ingrédients après chargement des cocktails
             autocomplete(document.getElementById('desired-ingredient'), allIngredients, 'desired-autocomplete-list');
             autocomplete(document.getElementById('excluded-ingredient'), allIngredients, 'excluded-autocomplete-list');
