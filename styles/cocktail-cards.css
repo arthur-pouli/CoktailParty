@@ -8,18 +8,45 @@
 }
 
 .cocktail-card {
-    background: #ffffff; 
     border-radius: 16px; 
-    padding: 15px; 
+    padding: 20px 15px; /* Padding vertical ajusté */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     border-left: 4px solid #3498db; 
     max-width: 100%; 
     margin-bottom: 10px; 
+    min-height: 300px; /* Hauteur minimale */
+    background: #ffffff; /* Fond blanc par défaut */
+    color: black; /* Texte noir par défaut */
+    position: relative; /* Nécessaire pour l'overlay */
+    overflow: hidden; /* Masque le débordement */
 }
 
-.cocktail-card:hover {
-    transform: translateY(-8px); 
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); 
+.cocktail-card.has-image {
+    background-size: cover; /* Couvre toute la carte */
+    background-position: center; /* Centre l'image dans la carte */
+    color: white; /* Texte blanc si image de fond */
+}
+
+.cocktail-card.has-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5); /* Overlay clair */
+    z-index: 1; /* Superposition au-dessus de l'image */
+}
+
+.cocktail-card.has-image h3,
+.cocktail-card.has-image p {
+    position: relative;
+    z-index: 2; /* Texte au-dessus de l'overlay */
+}
+
+.cocktail-card h3,
+.cocktail-card p {
+    margin: 0;
 }
 
 /* Styles pour la vue liste */
@@ -34,11 +61,15 @@
 }
 
 .list .cocktail-card img {
-    width: 50px; /* Ajustez la taille de l'image pour la vue liste */
+    width: 50px; /* Taille de l'image pour la vue liste */
     height: auto; 
     margin-right: 10px; /* Espacement entre l'image et le texte */
 }
 
+/* Nouvelle règle pour ajuster les images de fond */
+.cocktail-card.has-image {
+    background-repeat: no-repeat; /* Pas de répétition de l'image */
+}
 
 @media (max-width: 768px) {
     .grid {
@@ -48,5 +79,6 @@
 
     .cocktail-card {
         padding: 10px; 
+        min-height: 250px; /* Ajustement pour les écrans plus petits */
     }
 }

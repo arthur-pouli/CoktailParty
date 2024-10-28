@@ -93,6 +93,26 @@ footer {
     width: 100%; 
 }
 
+
+.autocomplete-filters {
+    display: flex;
+    flex-direction: column; /* Changement pour la direction verticale */
+    align-items: center; /* Centrer les éléments */
+    gap: 10px; /* Espacement entre les filtres */
+}
+
+.filter {
+    width: 100%; /* S'assurer que chaque filtre prend toute la largeur */
+    max-width: 300px; /* Largeur maximale pour les petits écrans */
+}
+
+@media (min-width: 769px) {
+    .autocomplete-filters {
+        flex-direction: row; /* Rétablir la direction horizontale pour les grands écrans */
+    }
+}
+
+
 @media (max-width: 768px) {
     .grid {
         padding: 10px; 
