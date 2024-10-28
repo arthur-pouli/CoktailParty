@@ -1,0 +1,768 @@
+{
+    "cocktails": {
+      "Afterglow": {
+        "nom": "Afterglow",
+        "description": "Un cocktail fruité et sans alcool aux saveurs tropicales.",
+        "recette": [
+          {"ingredient": "jus d'orange", "qtt": 4, "unite": "", "type": "soft"},
+          {"ingredient": "jus d'ananas", "qtt": 4, "unite": "", "type": "soft"},
+          {"ingredient": "sirop de grenadine", "qtt": 1, "unite": "", "type": "soft"}
+        ],
+        "image": "Resource/Picture/juju/Afterglow.jpg"
+      },
+      "Almond Joy": {
+        "nom": "Almond Joy",
+        "description": "Un cocktail crémeux et chocolaté, idéal pour les amateurs de douceurs.",
+        "recette": [
+          {"ingredient": "Liqueur de cacao", "qtt": 2, "unite": "", "type": "hard"},
+          {"ingredient": "Amaretto", "qtt": 2, "unite": "", "type": "hard"},
+          {"ingredient": "Crème liquide", "qtt": 4, "unite": "", "type": "soft"}
+        ],
+        "image": "Resource/Picture/juju/AlmondJoy.jpg"
+      },
+      "Amalfi": {
+        "nom": "Amalfi",
+        "description": "Un cocktail rafraîchissant aux notes d'agrumes, parfait pour l'été.",
+        "recette": [
+          {"ingredient": "Jus d'orange", "qtt": 3, "unite": "", "type": "soft"},
+          {"ingredient": "Jus d'ananas", "qtt": 2, "unite": "", "type": "soft"},
+          {"ingredient": "Sirop de grenadine", "qtt": 1, "unite": "", "type": "soft"},
+          {"ingredient": "Jus de citron jaune", "qtt": 1, "unite": "", "type": "soft"}
+        ],
+        "image": "Resource/Picture/juju/Amalfi.jpg"
+      },
+      "Angel's Face": {
+        "nom": "Angel's Face",
+        "description": "Un mélange d'alcools fruités qui ravira vos papilles.",
+        "recette": [
+          {"ingredient": "Calvados", "qtt": 3, "unite": "", "type": "hard"},
+          {"ingredient": "Abricot brandy", "qtt": 3, "unite": "", "type": "hard"},
+          {"ingredient": "Gin", "qtt": 3, "unite": "", "type": "hard"}
+        ],
+        "image": "Resource/Picture/juju/Angel's Face.jpg"
+      },
+      "Aperol Spritz": {
+        "nom": "Aperol Spritz",
+        "description": "Un apéritif pétillant et amer, emblématique de l'Italie.",
+        "recette": [
+          {"ingredient": "Aperol", "qtt": 3, "unite": "", "type": "hard"},
+          {"ingredient": "Eau gazeuse", "qtt": 3, "unite": "", "type": "soft"},
+          {"ingredient": "Prosecco", "qtt": 3, "unite": "", "type": "hard"}
+        ],
+        "image": "Resource/Picture/juju/Aperol Spritz.jpg"
+      },
+      "Aviateur": {
+        "nom": "Aviateur",
+        "description": "Un cocktail élégant à base de gin et de liqueurs fruitées.",
+        "recette": [
+          {"ingredient": "Liqueur de violette", "qtt": 1, "unite": "", "type": "hard"},
+          {"ingredient": "Liqueur de marasquin", "qtt": 2, "unite": "", "type": "hard"},
+          {"ingredient": "Jus de citron jaune", "qtt": 3, "unite": "", "type": "soft"},
+          {"ingredient": "Gin", "qtt": 4, "unite": "", "type": "hard"}
+        ],
+        "image": "Resource/Picture/juju/Aviateur.jpg"
+      },
+      "B & B": {
+        "nom": "B & B",
+        "description": "Un mélange harmonieux de brandy et de bénédictine.",
+        "recette": [
+          {"ingredient": "Brandy", "qtt": 4, "unite": "", "type": "hard"},
+          {"ingredient": "Benedictine", "qtt": 4, "unite": "", "type": "hard"}
+        ],
+        "image": "Resource/Picture/juju/B & B.jpg"
+      },
+      "Balalaika": {
+        "nom": "Balalaika",
+        "description": "Un cocktail à base de vodka, frais et fruité.",
+        "recette": [
+          {"ingredient": "Vodka", "qtt": 5, "unite": "", "type": "hard"},
+          {"ingredient": "Cointreau", "qtt": 3, "unite": "", "type": "hard"},
+          {"ingredient": "Jus de citron vert", "qtt": 1, "unite": "", "type": "soft"},
+          {"ingredient": "Canadou", "qtt": 1, "unite": "", "type": "soft"}
+        ],
+        "image": "Resource/Picture/juju/Balalaika.jpg"
+      },
+      "Basil's Smash": {
+        "nom": "Basil's Smash",
+        "description": "Un cocktail frais et herbacé, parfait pour les amateurs de basilic.",
+        "recette": [
+          {"ingredient": "Jus de citron jaune", "qtt": 2, "unite": "", "type": "soft"},
+          {"ingredient": "Feuille de basilic", "qtt": 10, "unite": "", "type": "soft"},
+          {"ingredient": "Gin", "qtt": 5, "unite": "", "type": "hard"},
+          {"ingredient": "Canadou", "qtt": 1.5, "unite": "", "type": "soft"}
+        ],
+        "image": "Resource/Picture/juju/BasilsSmash.jpg"
+      },
+      "Black Russian": {
+        "nom": "Black Russian",
+        "description": "Un cocktail fort, sucré et amer, à base de vodka et de liqueur de café.",
+        "recette": [
+          {"ingredient": "Liqueur de café", "qtt": 3, "unite": "", "type": "hard"},
+          {"ingredient": "Vodka", "qtt": 6, "unite": "", "type": "hard"}
+        ],
+        "image": "Resource/Picture/juju/BlackRussian.jpg"
+      },
+          "Bloody Mary": {
+            "nom": "Bloody Mary",
+            "description": "Un cocktail épicé à base de vodka et de jus de tomate, souvent servi au brunch.",
+            "recette": [
+              {"ingredient": "Vodka", "qtt": 2, "unite": "cl", "type":"hard"},
+              {"ingredient": "Jus de tomate", "qtt": 4, "unite": "cl", "type":"soft"},
+              {"ingredient": "Tabasco", "qtt": 0.1, "unite": "cl", "type":"soft"},
+              {"ingredient": "Jus de citron jaune", "qtt": 2, "unite": "cl", "type":"soft"}
+            ],
+            "image": "Resource/Picture/juju/BloodyMary.jpg"
+          },
+          "Blue Lagoon": {
+            "nom": "Blue Lagoon",
+            "description": "Un cocktail rafraîchissant et coloré, avec une touche d'agrumes.",
+            "recette": [
+              {"ingredient": "Vodka", "qtt": 4, "unite": "cl", "type":"hard"},
+              {"ingredient": "Liqueur de curaçao bleu", "qtt": 2, "unite": "cl", "type":"soft"},
+              {"ingredient": "Jus de citron jaune", "qtt": 1, "unite": "cl", "type":"soft"}
+            ],
+            "image": "Resource/Picture/juju/BlueLagoon.jpg"
+          },
+          "Brandy Alexander": {
+            "nom": "Brandy Alexander",
+            "description": "Un cocktail crémeux au cognac, parfait pour les amateurs de douceur.",
+            "recette": [
+              {"ingredient": "Whisky", "qtt": 4, "unite": "cl", "type":"hard"},
+              {"ingredient": "Liqueur de cacao", "qtt": 3, "unite": "cl", "type":"soft"},
+              {"ingredient": "Crème liquide", "qtt": 2, "unite": "cl", "type":"soft"},
+              {"ingredient": "Crème liquide", "qtt": 0.1, "unite": "cl", "type":"soft"}
+            ],
+            "image": "Resource/Picture/juju/BrandyAlexander.jpg"
+          },
+          "Caramel Old Fashioned": {
+            "nom": "Caramel Old Fashioned",
+            "description": "Une variante douce du classique Old Fashioned, avec une touche de caramel.",
+            "recette": [
+              {"ingredient": "Liqueur de caramel", "qtt": 4, "unite": "cl", "type":"soft"},
+              {"ingredient": "Angostura", "qtt": 0, "unite": "cl", "type":"soft"},
+              {"ingredient": "Canadou", "qtt": 1, "unite": "cl", "type":"soft"},
+              {"ingredient": "Cognac", "qtt": 6, "unite": "cl", "type":"hard"}
+            ],
+            "image": "Resource/Picture/juju/CaramelOldFashioned.jpg"
+          },
+          "Childhood": {
+            "nom": "Childhood",
+            "description": "Un cocktail nostalgique aux saveurs fruitées et florales.",
+            "recette": [
+              {"ingredient": "Liqueur de violette", "qtt": 2, "unite": "cl", "type":"soft"},
+              {"ingredient": "Canadou", "qtt": 1, "unite": "cl", "type":"soft"},
+              {"ingredient": "Jus de citron jaune", "qtt": 1, "unite": "cl", "type":"soft"},
+              {"ingredient": "Rhum blanc", "qtt": 4, "unite": "cl", "type":"hard"}
+            ],
+            "image": "Resource/Picture/juju/Childhood.jpg"
+          },
+          "Chocolate Martini": {
+            "nom": "Chocolate Martini",
+            "description": "Un cocktail élégant et chocolaté, parfait pour les amateurs de douceur.",
+            "recette": [
+              {"ingredient": "Vodka", "qtt": 4, "unite": "cl", "type":"hard"},
+              {"ingredient": "Liqueur de cacao", "qtt": 3, "unite": "cl", "type":"soft"}
+            ],
+            "image": "Resource/Picture/juju/ChocolateMartini.jpg"
+          },
+          "Claridge": {
+            "nom": "Claridge",
+            "description": "Un cocktail sophistiqué, avec des notes d'agrumes et de fruits.",
+            "recette": [
+              {"ingredient": "Cointreau", "qtt": 2, "unite": "cl", "type":"soft"},
+              {"ingredient": "Abricot brandy", "qtt": 2, "unite": "cl", "type":"soft"},
+              {"ingredient": "Martini blanc", "qtt": 3, "unite": "cl", "type":"soft"},
+              {"ingredient": "Gin", "qtt": 3, "unite": "cl", "type":"hard"}
+            ],
+            "image": "Resource/Picture/juju/Claridge.jpg"
+          },
+          "Clover Club": {
+            "nom": "Clover Club",
+            "description": "Un cocktail fruité et pétillant, avec des framboises fraîches.",
+            "recette": [
+              {"ingredient": "Framboises écrasées", "qtt": 5, "unite": "cl", "type":"soft"},
+              {"ingredient": "Gin", "qtt": 5, "unite": "cl", "type":"hard"},
+              {"ingredient": "Jus de citron jaune", "qtt": 2, "unite": "cl", "type":"soft"},
+              {"ingredient": "Blanc d'œuf", "qtt": 0.33, "unite": "cl", "type":"soft"},
+              {"ingredient": "Crème de framboise", "qtt": 2, "unite": "cl", "type":"soft"},
+              {"ingredient": "Canadou", "qtt": 1, "unite": "cl", "type":"soft"}
+            ],
+            "image": "Resource/Picture/juju/CloverClub.jpg"
+          },
+          "Cœur de dragon": {
+            "nom": "Cœur de dragon",
+            "description": "Un cocktail exotique avec des saveurs tropicales et épicées.",
+            "recette": [
+              {"ingredient": "Sirop de gingembre", "qtt": 0.5, "unite": "cl", "type":"soft"},
+              {"ingredient": "Jus de citron vert", "qtt": 1, "unite": "cl", "type":"soft"},
+              {"ingredient": "Jus d'ananas", "qtt": 2, "unite": "cl", "type":"soft"},
+              {"ingredient": "Rhum ambré", "qtt": 3, "unite": "cl", "type":"hard"},
+              {"ingredient": "Jus de fruits de la passion", "qtt": 2, "unite": "cl", "type":"soft"}
+            ],
+            "image": "Resource/Picture/juju/Cœurdedragon.jpg"
+          },
+          "Coeur de dragonneau": {
+            "nom": "Coeur de dragonneau",
+            "description": "Une version douce et fruitée du Cœur de dragon.",
+            "recette": [
+              {"ingredient": "Sirop de gingembre", "qtt": 1, "unite": "cl", "type":"soft"},
+              {"ingredient": "Jus de citron vert", "qtt": 1, "unite": "cl", "type":"soft"},
+              {"ingredient": "Jus d'ananas", "qtt": 3, "unite": "cl", "type":"soft"},
+              {"ingredient": "Jus de fruits de la passion", "qtt": 4, "unite": "cl", "type":"soft"}
+            ],
+            "image": "Resource/Picture/juju/Coeurdedragonneau.jpg"
+          },
+          "Coeur Fondant": {
+            "nom": "Coeur Fondant",
+            "description": "Un cocktail riche et sucré, avec des notes de caramel.",
+            "recette": [
+              {"ingredient": "Vodka", "qtt": 5, "unite": "cl", "type":"hard"},
+              {"ingredient": "Liqueur de caramel", "qtt": 2, "unite": "cl", "type":"soft"},
+              {"ingredient": "Liqueur de cacao", "qtt": 3, "unite": "cl", "type":"soft"}
+            ],
+            "image": "Resource/Picture/juju/CoeurFondant.jpg"
+          },
+          "Cosmopolitan": {
+            "nom": "Cosmopolitan",
+            "description": "Un cocktail chic et fruité, souvent associé à la ville de New York.",
+            "recette": [
+              {"ingredient": "Jus de citron vert", "qtt": 1, "unite": "cl", "type":"soft"},
+              {"ingredient": "Jus de cranberry", "qtt": 2, "unite": "cl", "type":"soft"},
+              {"ingredient": "Cointreau", "qtt": 3, "unite": "cl", "type":"soft"},
+              {"ingredient": "Vodka", "qtt": 4, "unite": "cl", "type":"hard"}
+            ],
+            "image": "Resource/Picture/juju/Cosmopolitan.jpg"
+          },
+          "Daikiwi": {
+            "nom": "Daikiwi",
+            "description": "Un cocktail fruité et rafraîchissant, parfait pour l'été.",
+            "recette": [
+              {"ingredient": "Jus de kiwi", "qtt": 5, "unite": "cl", "type":"soft"},
+              {"ingredient": "Jus de citron vert", "qtt": 1, "unite": "cl", "type":"soft"},
+              {"ingredient": "Canadou", "qtt": 2, "unite": "cl", "type":"soft"},
+              {"ingredient": "Rhum blanc", "qtt": 2, "unite": "cl", "type":"hard"}
+            ],
+            "image": "Resource/Picture/juju/Daikiwi.jpg"
+          },
+          "Daiquiri": {
+            "nom": "Daiquiri",
+            "description": "Un classique des cocktails à base de rhum, acidulé et rafraîchissant.",
+            "recette": [
+              {"ingredient": "Rhum blanc", "qtt": 6, "unite": "cl", "type":"hard"},
+              {"ingredient": "Jus de citron jaune", "qtt": 3, "unite": "cl", "type":"soft"},
+              {"ingredient": "Canadou", "qtt": 1, "unite": "cl", "type":"soft"}
+            ],
+            "image": "Resource/Picture/juju/Daiquiri.jpg"
+          },
+          "Diplomate": {
+            "nom": "Diplomate",
+            "description": "Un cocktail rafraîchissant avec des saveurs de melon et d'ananas.",
+            "recette": [
+              {"ingredient": "Vodka", "qtt": 2, "unite": "cl", "type":"hard"},
+              {"ingredient": "Liqueur de melon", "qtt": 3, "unite": "cl", "type":"soft"},
+              {"ingredient": "Jus de citron jaune", "qtt": 1, "unite": "cl", "type":"soft"},
+              {"ingredient": "Jus d'ananas", "qtt": 4, "unite": "cl", "type":"soft"}
+            ],
+            "image": "Resource/Picture/juju/Diplomate.jpg"
+          },
+    
+          "Dry Martini": {
+            "nom": "Dry Martini",
+            "description": "Un cocktail emblématique, élégant et rafraîchissant, à base de gin et de vermouth sec.",
+            "recette": [
+                {"ingredient": "Gin", "qtt": 8, "unite": "cl", "type":"hard"},
+                {"ingredient": "Martini blanc", "qtt": 2, "unite": "cl", "type":"soft"}
+            ],
+            "image": "Resource/Picture/juju/DryMartini.jpg"
+        },
+        "El Diablo": {
+            "nom": "El Diablo",
+            "description": "Un cocktail épicé et pétillant qui associe tequila, bière de gingembre et crème de cassis.",
+            "recette": [
+                {"ingredient": "Ginger beer", "qtt": 6, "unite": "cl", "type":"soft"},
+                {"ingredient": "Tequila", "qtt": 4, "unite": "cl", "type":"hard"},
+                {"ingredient": "Crème de cassis", "qtt": 2, "unite": "cl", "type":"soft"}
+            ],
+            "image": "Resource/Picture/juju/ElDiablo.jpg"
+        },
+        "El Presidente": {
+            "nom": "El Presidente",
+            "description": "Un cocktail classique à base de rhum, vermouth et grenadine, idéal pour les amateurs de boissons raffinées.",
+            "recette": [
+                {"ingredient": "Sirop de grenadine", "qtt": 1, "unite": "cl", "type":"soft"},
+                {"ingredient": "Martini rouge", "qtt": 3, "unite": "cl", "type":"soft"},
+                {"ingredient": "Cointreau", "qtt": 2, "unite": "cl", "type":"hard"},
+                {"ingredient": "Rhum blanc", "qtt": 4, "unite": "cl", "type":"hard"}
+            ],
+            "image": "Resource/Picture/juju/ElPresidente.jpg"
+        },
+        "Exotic cucumber": {
+            "nom": "Exotic cucumber",
+            "description": "Un cocktail rafraîchissant à base de concombre et de jus d'orange, parfait pour les journées chaudes.",
+            "recette": [
+                {"ingredient": "Sirop de concombre", "qtt": 1, "unite": "cl", "type":"soft"},
+                {"ingredient": "Jus d'orange", "qtt": 4, "unite": "cl", "type":"soft"},
+                {"ingredient": "Jus d'ananas", "qtt": 3, "unite": "cl", "type":"soft"}
+            ],
+            "image": "Resource/Picture/juju/Exoticcucumber.jpg"
+        },
+        "Fun at the beach": {
+            "nom": "Fun at the beach",
+            "description": "Un cocktail fruité et sucré qui évoque les vacances à la plage.",
+            "recette": [
+                {"ingredient": "Vodka", "qtt": 1.5, "unite": "cl", "type":"hard"},
+                {"ingredient": "Crème de framboise", "qtt": 1, "unite": "cl", "type":"soft"},
+                {"ingredient": "Liqueur de melon", "qtt": 1, "unite": "cl", "type":"soft"},
+                {"ingredient": "Jus de cranberry", "qtt": 3, "unite": "cl", "type":"soft"},
+                {"ingredient": "Jus d'ananas", "qtt": 3, "unite": "cl", "type":"soft"}
+            ],
+            "image": "Resource/Picture/juju/Funatthebeach.jpg"
+        },
+        "Gimlet": {
+            "nom": "Gimlet",
+            "description": "Un mélange simple mais savoureux de gin et de jus de citron vert.",
+            "recette": [
+                {"ingredient": "Gin", "qtt": 6, "unite": "cl", "type":"hard"},
+                {"ingredient": "Canadou", "qtt": 1, "unite": "cl", "type":"soft"},
+                {"ingredient": "Jus de citron vert", "qtt": 2, "unite": "cl", "type":"soft"}
+            ],
+            "image": "Resource/Picture/juju/Gimlet.jpg"
+        },
+        "Ginger Island": {
+            "nom": "Ginger Island",
+            "description": "Un cocktail tropical qui marie le rhum et le gingembre pour une expérience rafraîchissante.",
+            "recette": [
+                {"ingredient": "Citron vert pilé", "qtt": 1, "unite": "cl", "type":"soft"},
+                {"ingredient": "Martini blanc", "qtt": 6, "unite": "cl", "type":"hard"},
+                {"ingredient": "Rhum blanc", "qtt": 4, "unite": "cl", "type":"hard"},
+                {"ingredient": "Sirop de gingembre", "qtt": 1, "unite": "cl", "type":"soft"}
+            ],
+            "image": "Resource/Picture/juju/GingerIsland.jpg"
+        },
+        "Godfather": {
+            "nom": "Godfather",
+            "description": "Un cocktail riche et corsé, à base de whisky et d'amaretto.",
+            "recette": [
+                {"ingredient": "Whisky", "qtt": 7, "unite": "cl", "type":"hard"},
+                {"ingredient": "Amaretto", "qtt": 3, "unite": "cl", "type":"soft"}
+            ],
+            "image": "Resource/Picture/juju/Godfather.jpg"
+        },
+        "Godmother": {
+            "nom": "Godmother",
+            "description": "Une variante douce du Godfather, utilisant de la vodka à la place du whisky.",
+            "recette": [
+                {"ingredient": "Vodka", "qtt": 7, "unite": "cl", "type":"hard"},
+                {"ingredient": "Amaretto", "qtt": 3, "unite": "cl", "type":"soft"}
+            ],
+            "image": "Resource/Picture/juju/Godmother.jpg"
+        },
+        "Japanese Slipper": {
+            "nom": "Japanese Slipper",
+            "description": "Un cocktail fruité et floral à base de liqueur de melon, de citron et de cognac.",
+            "recette": [
+                {"ingredient": "Liqueur de melon", "qtt": 3, "unite": "cl", "type":"soft"},
+                {"ingredient": "Jus de citron jaune", "qtt": 1.5, "unite": "cl", "type":"soft"},
+                {"ingredient": "Cognac", "qtt": 3, "unite": "cl", "type":"hard"}
+            ],
+            "image": "Resource/Picture/juju/JapaneseSlipper.jpg"
+        },
+        "Mai Tai": {
+            "nom": "Mai Tai",
+            "description": "Un cocktail tropical iconique, à base de rhum et de saveurs fruitées, idéal pour les amateurs de boissons exotiques.",
+            "recette": [
+                {"ingredient": "Rhum blanc", "qtt": 2, "unite": "cl", "type":"hard"},
+                {"ingredient": "Rhum ambré", "qtt": 2, "unite": "cl", "type":"hard"},
+                {"ingredient": "Canadou", "qtt": 1, "unite": "cl", "type":"soft"},
+                {"ingredient": "Jus de citron vert", "qtt": 1, "unite": "cl", "type":"soft"},
+                {"ingredient": "Amaretto", "qtt": 2, "unite": "cl", "type":"soft"},
+                {"ingredient": "Cointreau", "qtt": 2, "unite": "cl", "type":"hard"}
+            ],
+            "image": "Resource/Picture/juju/MaiTai.jpg"
+        },
+        "Manhattan": {
+            "nom": "Manhattan",
+            "description": "Un classique des cocktails à base de whisky, mélangé avec du vermouth et un soupçon d'angostura.",
+            "recette": [
+                {"ingredient": "Angostura", "qtt": 2, "unite": "cl", "type":"soft"},
+                {"ingredient": "Martini blanc", "qtt": 3, "unite": "cl", "type":"soft"},
+                {"ingredient": "Martini rouge", "qtt": 3, "unite": "cl", "type":"soft"},
+                {"ingredient": "Whisky", "qtt": 4, "unite": "cl", "type":"hard"}
+            ],
+            "image": "Resource/Picture/juju/Manhattan.jpg"
+        },
+        "Margarita": {
+            "nom": "Margarita",
+            "description": "Un cocktail mexicain rafraîchissant et acidulé à base de tequila et de jus de citron vert.",
+            "recette": [
+                {"ingredient": "Cointreau", "qtt": 2, "unite": "", "type": "hard"},
+                {"ingredient": "Jus de citron vert", "qtt": 1, "unite": "", "type": "soft"},
+                {"ingredient": "Tequila", "qtt": 3, "unite": "", "type": "hard"},
+                {"ingredient": "Jus d'orange", "qtt": 2, "unite": "", "type": "soft"},
+                {"ingredient": "Canadou", "qtt": 1, "unite": "", "type": "soft"}
+            ],
+            "image": "Resource/Picture/juju/Margarita.jpg"
+        },
+        "Melon Ball": {
+            "nom": "Melon Ball",
+            "description": "Un cocktail fruité à base de vodka et de liqueur de melon, parfait pour une touche de fraîcheur estivale.",
+            "recette": [
+                {"ingredient": "Vodka", "qtt": 3, "unite": "", "type": "hard"},
+                {"ingredient": "Liqueur de melon", "qtt": 1, "unite": "", "type": "hard"},
+                {"ingredient": "Jus d'orange", "qtt": 6, "unite": "", "type": "soft"}
+            ],
+            "image": "Resource/Picture/juju/MelonBall.jpg"
+        },
+        "Mojito": {
+            "nom": "Mojito",
+            "description": "Un cocktail cubain rafraîchissant à base de rhum, menthe fraîche et citron vert, parfait pour les journées chaudes.",
+            "recette": [
+                {"ingredient": "Citron vert pilé", "qtt": 0, "unite": "", "type": "soft"},
+                {"ingredient": "Feuilles de menthe", "qtt": 0, "unite": "", "type": "soft"},
+                {"ingredient": "Canadou", "qtt": 0, "unite": "", "type": "soft"},
+                {"ingredient": "Eau gazeuse", "qtt": 0, "unite": "", "type": "soft"},
+                {"ingredient": "Rhum blanc", "qtt": 150, "unite": "ml", "type": "hard"}
+            ],
+            "image": "Resource/Picture/juju/Mojito.jpg"
+        },
+        "Moscow Mule": {
+            "nom": "Moscow Mule",
+            "description": "Un cocktail à base de vodka, gingembre et citron vert, servi généralement dans une tasse en cuivre.",
+            "recette": [
+                {"ingredient": "Ginger beer", "qtt": 6, "unite": "", "type": "soft"},
+                {"ingredient": "Jus de citron vert", "qtt": 1, "unite": "", "type": "soft"},
+                {"ingredient": "Vodka", "qtt": 2, "unite": "", "type": "hard"}
+            ],
+            "image": "Resource/Picture/juju/MoscowMule.jpg"
+        },
+        "Negroni": {
+            "nom": "Negroni",
+            "description": "Un cocktail classique italien à base de gin, de vermouth et de Campari, célèbre pour son goût amer et équilibré.",
+            "recette": [
+                {"ingredient": "Campari", "qtt": 3, "unite": "", "type": "hard"},
+                {"ingredient": "Martini rouge", "qtt": 3, "unite": "", "type": "hard"},
+                {"ingredient": "Gin", "qtt": 3, "unite": "", "type": "hard"}
+            ],
+            "image": "Resource/Picture/juju/Negroni.jpg"
+        },
+        "Orange Chestnut": {
+            "nom": "Orange Chestnut",
+            "description": "Un mélange rafraîchissant et légèrement sucré de Birlou et de Cointreau, parfait pour l'été.",
+            "recette": [
+                {"ingredient": "Birlou", "qtt": 0.67, "unite": "", "type": "hard"},
+                {"ingredient": "Cointreau", "qtt": 0.33, "unite": "", "type": "hard"}
+            ],
+            "image": "Resource/Picture/juju/OrangeChestnut.jpg"
+        },
+        "Orangin": {
+            "nom": "Orangin",
+            "description": "Un cocktail fruité à base de gin et de jus d'orange, avec une touche d'épices et d'herbes.",
+            "recette": [
+                {"ingredient": "Gin", "qtt": 2, "unite": "", "type": "hard"},
+                {"ingredient": "Jus d'orange", "qtt": 4, "unite": "", "type": "soft"},
+                {"ingredient": "Angostura", "qtt": 0, "unite": "", "type": "soft"},
+                {"ingredient": "Feuilles de basilic", "qtt": 0, "unite": "", "type": "soft"},
+                {"ingredient": "Zeste d'orange", "qtt": 0, "unite": "", "type": "soft"}
+            ],
+            "image": "Resource/Picture/juju/Orangin.jpg"
+        },
+        "Orgasme": {
+            "nom": "Orgasme",
+            "description": "Un cocktail crémeux et sucré qui combine Bailey's, liqueur de café et amaretto pour une explosion de saveurs.",
+            "recette": [
+                {"ingredient": "Bailey's", "qtt": 3, "unite": "", "type": "soft"},
+                {"ingredient": "Liqueur de café", "qtt": 3, "unite": "", "type": "hard"},
+                {"ingredient": "Amaretto", "qtt": 3, "unite": "", "type": "hard"}
+            ],
+            "image": "Resource/Picture/juju/Orgasme.jpg"
+        },
+        "Paradise": {
+            "nom": "Paradise",
+            "description": "Un cocktail tropical à base de gin, brandy d'abricot et jus de fruits, évoquant les saveurs du paradis.",
+            "recette": [
+                {"ingredient": "Jus de citron jaune", "qtt": 0.5, "unite": "", "type": "soft"},
+                {"ingredient": "Abricot brandy", "qtt": 2, "unite": "", "type": "hard"},
+                {"ingredient": "Jus d'orange", "qtt": 2, "unite": "", "type": "soft"},
+                {"ingredient": "Gin", "qtt": 4, "unite": "", "type": "hard"}
+            ],
+            "image": "Resource/Picture/juju/Paradise.jpg"
+        },
+        "Pina Colada": {
+            "nom": "Pina Colada",
+            "description": "Un classique des tropiques avec du rhum, du lait de coco et du jus d'ananas, souvent servi avec une boule de glace vanille.",
+            "recette": [
+                {"ingredient": "Boule de glace vanille (opt)", "qtt": 1, "unite": "", "type": "soft"},
+                {"ingredient": "Canadou", "qtt": 1, "unite": "", "type": "soft"},
+                {"ingredient": "Rhum ambré", "qtt": 2, "unite": "", "type": "hard"},
+                {"ingredient": "Rhum blanc", "qtt": 2, "unite": "", "type": "hard"},
+                {"ingredient": "Lait de coco", "qtt": 3, "unite": "", "type": "soft"},
+                {"ingredient": "Jus d'ananas", "qtt": 6, "unite": "", "type": "soft"}
+            ],
+            "image": "Resource/Picture/juju/PinaColada.jpg"
+        },
+        "Pink Lady": {
+            "nom": "Pink Lady",
+            "description": "Un cocktail élégant et fruité à base de gin, jus de citron et sirop de grenadine.",
+            "recette": [
+                {"ingredient": "Sirop de grenadine", "qtt": 1, "unite": "", "type": "soft"},
+                {"ingredient": "Jus de citron jaune", "qtt": 2, "unite": "", "type": "soft"},
+                {"ingredient": "Gin", "qtt": 4, "unite": "", "type": "hard"}
+            ],
+            "image": "Resource/Picture/juju/PinkLady.jpg"
+        },"Pink Panther": {
+            "nom": "Pink Panther",
+            "description": "Un cocktail fruité avec une touche exotique, mélangeant gin, jus d'ananas et grenadine.",
+            "recette": [
+                {"ingredient": "Sirop de grenadine", "qtt": 1, "unite": "", "type": "soft"},
+                {"ingredient": "Jus de citron jaune", "qtt": 2, "unite": "", "type": "soft"},
+                {"ingredient": "Gin", "qtt": 4, "unite": "", "type": "hard"},
+                {"ingredient": "Jus d'ananas", "qtt": 3, "unite": "", "type": "soft"}
+            ],
+            "image": "Resource/Picture/juju/PinkPanther.jpg"
+        },
+        "Planteur ananas": {
+            "nom": "Planteur ananas",
+            "description": "Une boisson fruitée et rafraîchissante, parfaite pour l'été, à base de jus d'ananas et de rhum blanc.",
+            "recette": [
+                {"ingredient": "Jus de citron jaune", "qtt": 1, "unite": "", "type": "soft"},
+                {"ingredient": "Canadou", "qtt": 2, "unite": "", "type": "soft"},
+                {"ingredient": "Jus d'ananas", "qtt": 3, "unite": "", "type": "soft"},
+                {"ingredient": "Rhum blanc", "qtt": 4, "unite": "", "type": "hard"}
+            ],
+            "image": "Resource/Picture/juju/Planteurananas.jpg"
+        },
+        "Planteur orange": {
+            "nom": "Planteur orange",
+            "description": "Une variante du Planteur, utilisant du jus d'orange pour une saveur plus douce et fruitée.",
+            "recette": [
+                {"ingredient": "Jus de citron jaune", "qtt": 1, "unite": "", "type": "soft"},
+                {"ingredient": "Canadou", "qtt": 2, "unite": "", "type": "soft"},
+                {"ingredient": "Jus d'orange", "qtt": 3, "unite": "", "type": "soft"},
+                {"ingredient": "Rhum blanc", "qtt": 4, "unite": "", "type": "hard"}
+            ],
+            "image": "Resource/Picture/juju/Planteurorange.jpg"
+        },
+        "Rainbow": {
+            "nom": "Rainbow",
+            "description": "Un cocktail multicolore qui combine grenadine, jus d'orange et vodka pour un effet visuel et gustatif saisissant.",
+            "recette": [
+                {"ingredient": "Sirop de grenadine", "qtt": 1, "unite": "", "type": "soft"},
+                {"ingredient": "Jus d'orange", "qtt": 1, "unite": "", "type": "soft"},
+                {"ingredient": "Vodka", "qtt": 1, "unite": "", "type": "hard"},
+                {"ingredient": "Liqueur de curaçao bleu", "qtt": 1, "unite": "", "type": "hard"}
+            ],
+            "image": "Resource/Picture/juju/Rainbow.jpg"
+        },
+        "Rare & Expensive": {
+            "nom": "Rare & Expensive",
+            "description": "Un cocktail sophistiqué combinant whisky, rhum et sirop d'érable, avec une touche d'angostura et de blanc d'œuf pour une texture riche.",
+            "recette": [
+                {"ingredient": "Whisky", "qtt": 2, "unite": "", "type": "hard"},
+                {"ingredient": "Rhum ambré", "qtt": 2, "unite": "", "type": "hard"},
+                {"ingredient": "Jus de citron jaune", "qtt": 2, "unite": "", "type": "soft"},
+                {"ingredient": "Blanc d'œuf", "qtt": 0.33, "unite": "", "type": "soft"},
+                {"ingredient": "Angostura", "qtt": 1, "unite": "", "type": "soft"},
+                {"ingredient": "Sirop d'érable", "qtt": 1, "unite": "", "type": "soft"},
+                {"ingredient": "Cointreau", "qtt": 1, "unite": "", "type": "hard"}
+            ],
+            "image": "Resource/Picture/juju/Rare&Expensive.jpg"
+        },
+        "Rose": {
+            "nom": "Rose",
+            "description": "Un cocktail doux et acidulé avec du gin, du citron et du Cointreau, équilibré par une touche de grenadine.",
+            "recette": [
+                {"ingredient": "Jus de citron jaune", "qtt": 2, "unite": "", "type": "soft"},
+                {"ingredient": "Gin", "qtt": 4, "unite": "", "type": "hard"},
+                {"ingredient": "Cointreau", "qtt": 3, "unite": "", "type": "hard"},
+                {"ingredient": "Sirop de grenadine", "qtt": 1, "unite": "", "type": "soft"}
+            ],
+            "image": "Resource/Picture/juju/Rose.jpg"
+        },
+        "Saigon Club": {
+            "nom": "Saigon Club",
+            "description": "Un cocktail frais et fruité à base de jus de cranberry, citron et framboises écrasées, avec une texture onctueuse grâce au blanc d'œuf.",
+            "recette": [
+                {"ingredient": "Canadou", "qtt": 2, "unite": "", "type": "soft"},
+                {"ingredient": "Jus de citron jaune", "qtt": 2, "unite": "", "type": "soft"},
+                {"ingredient": "Jus de cranberry", "qtt": 4, "unite": "", "type": "soft"},
+                {"ingredient": "Framboises écrasées", "qtt": 1, "unite": "", "type": "soft"},
+                {"ingredient": "Blanc d'œuf", "qtt": 0.33, "unite": "", "type": "soft"}
+            ],
+            "image": "Resource/Picture/juju/SaigonClub.jpg"
+        },
+        "Saigon Cooler": {
+            "nom": "Saigon Cooler",
+            "description": "Un cocktail exotique et fruité avec du gin, du jus de citron et de cranberry, enrichi par une crème de framboise.",
+            "recette": [
+                {"ingredient": "Framboises écrasées", "qtt": 1, "unite": "", "type": "soft"},
+                {"ingredient": "Gin", "qtt": 4, "unite": "", "type": "hard"},
+                {"ingredient": "Jus de citron jaune", "qtt": 2, "unite": "", "type": "soft"},
+                {"ingredient": "Jus de cranberry", "qtt": 3, "unite": "", "type": "soft"},
+                {"ingredient": "Crème de framboise", "qtt": 2, "unite": "", "type": "soft"}
+            ],
+            "image": "Resource/Picture/juju/SaigonCooler.jpg"
+        },
+        "Sex on the beach": {
+            "nom": "Sex on the beach",
+            "description": "Un cocktail fruité et populaire à base de vodka, liqueur de pêche, cranberry et jus d'orange, idéal pour l'été.",
+            "recette": [
+                {"ingredient": "Vodka", "qtt": 3, "unite": "", "type": "hard"},
+                {"ingredient": "Liqueur de pêche", "qtt": 1, "unite": "", "type": "hard"},
+                {"ingredient": "Jus de cranberry", "qtt": 3, "unite": "", "type": "soft"},
+                {"ingredient": "Jus d'orange", "qtt": 3, "unite": "", "type": "soft"}
+            ],
+            "image": "Resource/Picture/juju/Sexonthebeach.jpg"
+        },
+        "Siberian Champagne": {
+            "nom": "Siberian Champagne",
+            "description": "Un cocktail pétillant et frais combinant vodka, liqueur de marasquin et champagne, avec une touche de crème de cassis et de basilic.",
+            "recette": [
+                {"ingredient": "Vodka", "qtt": 3, "unite": "", "type": "hard"},
+                {"ingredient": "Liqueur de marasquin", "qtt": 2, "unite": "", "type": "soft"},
+                {"ingredient": "Champagne", "qtt": 1, "unite": "", "type": "soft"},
+                {"ingredient": "Feuilles de basilic", "qtt": 1, "unite": "", "type": "soft"},
+                {"ingredient": "Jus de citron vert", "qtt": 1, "unite": "", "type": "soft"},
+                {"ingredient": "Crème de cassis", "qtt": 2, "unite": "", "type": "soft"}
+            ],
+            "image": "Resource/Picture/juju/SiberianChampagne.jpg"
+        },
+        "Side Car": {
+            "nom": "Side Car",
+            "description": "Un cocktail classique à base de cognac, Cointreau et jus de citron, pour une saveur riche et acidulée.",
+            "recette": [
+                {"ingredient": "Cognac", "qtt": 4, "unite": "", "type": "hard"},
+                {"ingredient": "Cointreau", "qtt": 2, "unite": "", "type": "soft"},
+                {"ingredient": "Jus de citron jaune", "qtt": 1, "unite": "", "type": "soft"}
+            ],
+            "image": "Resource/Picture/juju/SideCar.jpg"
+        },
+        "Tequila Sunrise": {
+            "nom": "Tequila Sunrise",
+            "description": "Un cocktail vibrant avec de la tequila, du jus d'orange et de la grenadine, imitant les couleurs d'un lever de soleil.",
+            "recette": [
+                {"ingredient": "Tequila", "qtt": 3, "unite": "", "type": "hard"},
+                {"ingredient": "Sirop de grenadine", "qtt": 1, "unite": "", "type": "soft"},
+                {"ingredient": "Jus d'orange", "qtt": 6, "unite": "", "type": "soft"}
+            ],
+            "image": "Resource/Picture/juju/TequilaSunrise.jpg"
+        },
+        "Tie Break": {
+            "nom": "Tie Break",
+            "description": "Un cocktail fruité et doux à base de jus d'orange, d'ananas et de sirop d'orgeat, parfait pour une soirée d'été.",
+            "recette": [
+                {"ingredient": "Jus d'orange", "qtt": 4, "unite": "", "type": "soft"},
+                {"ingredient": "Jus d'ananas", "qtt": 4, "unite": "", "type": "soft"},
+                {"ingredient": "Sirop d'orgeat", "qtt": 2, "unite": "", "type": "soft"}
+            ],
+            "image": "Resource/Picture/juju/TieBreak.jpg"
+        },
+        "Vert Melon": {
+            "nom": "Vert Melon",
+            "description": "Un cocktail coloré et frais, mêlant liqueur de melon, martini blanc et des jus de citron et d'ananas pour une explosion de saveurs.",
+            "recette": [
+                {"ingredient": "Martini blanc", "qtt": 2, "unite": "", "type": "soft"},
+                {"ingredient": "Liqueur de melon", "qtt": 4, "unite": "", "type": "soft"},
+                {"ingredient": "Jus de citron jaune", "qtt": 2, "unite": "", "type": "soft"},
+                {"ingredient": "Jus d'ananas", "qtt": 4, "unite": "", "type": "soft"}
+            ],
+            "image": "Resource/Picture/juju/VertMelon.jpg"
+        },
+        "Vesper Martini": {
+            "nom": "Vesper Martini",
+            "description": "Un cocktail élégant et puissant combinant gin, vodka et Lillet blanc, avec une touche de zeste de citron.",
+            "recette": [
+                {"ingredient": "Lillet blanc", "qtt": 0.5, "unite": "", "type": "soft"},
+                {"ingredient": "Vodka", "qtt": 2, "unite": "", "type": "hard"},
+                {"ingredient": "Gin", "qtt": 6, "unite": "", "type": "hard"},
+                {"ingredient": "Zeste de citron jaune", "qtt": 1, "unite": "", "type": "hard"}
+            ],
+            "image": "Resource/Picture/juju/VesperMartini.jpg"
+        },
+        "Virgin on the beach": {
+            "nom": "Virgin on the beach",
+            "description": "Un cocktail fruité sans alcool, parfait pour les journées ensoleillées.",
+            "recette": [
+                {"ingredient": "Sirop de pêche", "qtt": 1, "unite": "", "type": "soft"},
+                {"ingredient": "Jus d'ananas", "qtt": 2, "unite": "", "type": "soft"},
+                {"ingredient": "Jus d'orange", "qtt": 3, "unite": "", "type": "soft"},
+                {"ingredient": "Boisson cranberry", "qtt": 4, "unite": "", "type": "soft"}
+            ],
+            "image": "Resource/Picture/juju/Virgin_on_the_beach.jpg"
+        },
+        "Vodka Martini": {
+            "nom": "Vodka Martini",
+            "description": "Un classique intemporel, frais et élégant, à base de vodka.",
+            "recette": [
+                {"ingredient": "Vodka", "qtt": 6, "unite": "", "type": "hard"},
+                {"ingredient": "Martini blanc", "qtt": 2, "unite": "", "type": "soft"},
+                {"ingredient": "Zeste de citron jaune", "qtt": 1, "unite": "", "type": "hard"}
+            ],
+            "image": "Resource/Picture/juju/VodkaMartini.jpg"
+        },
+        "Ward Eight": {
+            "nom": "Ward Eight",
+            "description": "Un cocktail à base de whisky, fruité et acidulé.",
+            "recette": [
+                {"ingredient": "Sirop de grenadine", "qtt": 0.5, "unite": "", "type": "soft"},
+                {"ingredient": "Jus d'orange", "qtt": 4, "unite": "", "type": "soft"},
+                {"ingredient": "Whisky", "qtt": 2, "unite": "", "type": "hard"}
+            ],
+            "image": "Resource/Picture/juju/WardEight.jpg"
+        },
+        "Whisky Elderflower": {
+            "nom": "Whisky Elderflower",
+            "description": "Un mélange floral et rafraîchissant, idéal pour les amateurs de whisky.",
+            "recette": [
+                {"ingredient": "Whisky", "qtt": 5, "unite": "", "type": "hard"},
+                {"ingredient": "Jus de citron jaune", "qtt": 2, "unite": "", "type": "soft"},
+                {"ingredient": "Blanc d'œuf", "qtt": 0.33, "unite": "", "type": "soft"},
+                {"ingredient": "Sirop de fleur de sureau", "qtt": 2, "unite": "", "type": "soft"}
+            ],
+            "image": "Resource/Picture/juju/WhiskyElderflower.jpg"
+        },
+        "Whisky Sour": {
+            "nom": "Whisky Sour",
+            "description": "Un classique aigre-doux qui met en valeur le goût du whisky.",
+            "recette": [
+                {"ingredient": "Whisky", "qtt": 4, "unite": "", "type": "hard"},
+                {"ingredient": "Blanc d'œuf", "qtt": 0.33, "unite": "", "type": "soft"},
+                {"ingredient": "Canadou", "qtt": 2, "unite": "", "type": "soft"},
+                {"ingredient": "Angostura", "qtt": 1, "unite": "", "type": "hard"},
+                {"ingredient": "Jus de citron jaune", "qtt": 1, "unite": "", "type": "soft"}
+            ],
+            "image": "Resource/Picture/juju/WhiskySour.jpg"
+        },
+        "White Ejaculation": {
+            "nom": "White Ejaculation",
+            "description": "Un cocktail crémeux et sucré à base de liqueurs.",
+            "recette": [
+                {"ingredient": "Liqueur de café", "qtt": 1, "unite": "", "type": "soft"},
+                {"ingredient": "Amaretto", "qtt": 1, "unite": "", "type": "soft"},
+                {"ingredient": "Bailey's", "qtt": 2, "unite": "", "type": "soft"},
+                {"ingredient": "Vodka", "qtt": 2, "unite": "", "type": "hard"},
+                {"ingredient": "Lait", "qtt": 1, "unite": "", "type": "soft"}
+            ],
+            "image": "Resource/Picture/juju/WhiteEjaculation.jpg"
+        },
+        "White Lady": {
+            "nom": "White Lady",
+            "description": "Un cocktail classique à base de gin, frais et légèrement acidulé.",
+            "recette": [
+                {"ingredient": "Gin", "qtt": 4, "unite": "", "type": "hard"},
+                {"ingredient": "Cointreau", "qtt": 2, "unite": "", "type": "soft"},
+                {"ingredient": "Jus de citron jaune", "qtt": 1, "unite": "", "type": "soft"}
+            ],
+            "image": "Resource/Picture/juju/WhiteLady.jpg"
+        },
+        "White Russian": {
+            "nom": "White Russian",
+            "description": "Un mélange riche et crémeux de vodka et de liqueur de café.",
+            "recette": [
+                {"ingredient": "Liqueur de café", "qtt": 1, "unite": "", "type": "soft"},
+                {"ingredient": "Vodka", "qtt": 3, "unite": "", "type": "hard"},
+                {"ingredient": "Lait", "qtt": 4, "unite": "", "type": "soft"}
+            ],
+            "image": "Resource/Picture/juju/WhiteRussian.jpg"
+        }
+    }
+}
