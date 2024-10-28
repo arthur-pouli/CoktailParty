@@ -27,7 +27,7 @@ class Ingredient {
 
 // Variables globales pour stocker les cocktails
 let cocktails = [];
-let availableFiles = ["Resource/juju.json"]; // Fichiers JSON disponibles
+let availableFiles = ["Resource/juju.json","Resource/Alex.json"]; // Fichiers JSON disponibles
 let currentFileLoaded = null; // Variable pour suivre le fichier actuellement chargé
 
 // Fonction pour charger dynamiquement les cocktails à partir du fichier sélectionné
